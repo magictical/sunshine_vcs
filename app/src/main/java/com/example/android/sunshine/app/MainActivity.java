@@ -31,7 +31,9 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(LOG_TAG, "is onCreate");
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
@@ -39,6 +41,38 @@ public class MainActivity extends ActionBarActivity {
                     .commit();
         }
     }
+
+    @Override
+    protected void onStart() {
+        Log.v(LOG_TAG, "is onStart");
+        super.onStart();
+
+    }
+
+    @Override
+    protected  void onResume() {
+        Log.v(LOG_TAG, "is onResume");
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        Log.v(LOG_TAG, "is onPause");
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.v(LOG_TAG, "is onStop");
+        super.onStop();
+    }
+    @Override
+    protected void onDestroy() {
+        Log.v(LOG_TAG, "is onDestroy");
+        super.onDestroy();
+
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
