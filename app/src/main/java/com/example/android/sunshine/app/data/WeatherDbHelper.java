@@ -32,7 +32,7 @@ public class WeatherDbHelper extends SQLiteOpenHelper {
 
     static final String DATABASE_NAME = "weather.db";
 
-    //WeatherDbHelper »ý¼ºÀÚ
+    //WeatherDbHelper ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public WeatherDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -83,7 +83,7 @@ public class WeatherDbHelper extends SQLiteOpenHelper {
                 // per location, it's created a UNIQUE constraint with REPLACE strategy
                 " UNIQUE (" + WeatherEntry.COLUMN_DATE + ", " +
                 WeatherEntry.COLUMN_LOC_KEY + ") ON CONFLICT REPLACE);";
-        //SQL¹® ½ÇÇà (Å×ÀÌºí »ý¼º)
+        //SQLï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½ï¿½ï¿½)
         sqLiteDatabase.execSQL(SQL_CREATE_LOCAION_TABLE);
         sqLiteDatabase.execSQL(SQL_CREATE_WEATHER_TABLE);
     }

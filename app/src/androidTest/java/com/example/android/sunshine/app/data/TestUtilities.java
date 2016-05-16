@@ -73,6 +73,8 @@ public class TestUtilities extends AndroidTestCase {
     static ContentValues createNorthPoleLocationValues() {
         // Create a new map of values, where column names are the keys
         ContentValues testValues = new ContentValues();
+        //put메소드는 KEY/VALUE 사용함 COLUMN_LOCATION_SETTING은 openweather app에
+        // 쿼리로 보낼 String이고 그 값은 주소 값인 TEST_LOCATION임
         testValues.put(WeatherContract.LocationEntry.COLUMN_LOCATION_SETTING, TEST_LOCATION);
         testValues.put(WeatherContract.LocationEntry.COLUMN_CITY_NAME, "North Pole");
         testValues.put(WeatherContract.LocationEntry.COLUMN_COORD_LAT, 64.7488);
